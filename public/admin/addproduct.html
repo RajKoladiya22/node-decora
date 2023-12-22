@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docora-AddProduct</title>
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/remixicon.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin_style.css">
+</head>
+
+<body>
+
+    <!-- side-section-start  -->
+
+    <div id="wrapper">
+
+        <aside id="sidebar-wrapper">
+            <div class="sidebar-brand">
+                <h2>Decora</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="admin.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="adminprofile.html"><i class="fas fa-user-alt"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="Order.html"><i class="fas fa-shopping-cart"></i>Order</a>
+                </li>
+                <li class="active">
+                    <a href="addproduct.html"><i class="fas fa-plus"></i>Add Product</a>
+                </li>
+                <li>
+                    <a href="UserData.html"><i class="fas fa-users"></i>Users</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div id="navbar-wrapper">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- side-section-end  -->
+
+        <section class="add-data">
+            <div class="text-center">
+                <form method="post" action="/formToApi">
+                    <div>
+                        <label for="theme-name">Theme name : </label>
+                        <input type="text" class="theme-name" id="theme-name" placeholder="Enter theme name">
+                    </div>
+                    <div>
+                        <label for="theme-price">Theme price : </label>
+                        <input type="text" class="theme-price" id="theme-price" placeholder="Enter theme price">
+                    </div>
+                    <div>
+                        <label for="theme-category">Theme category : </label>
+                        <select name="category" id="theme-category">
+                            <option value="default" selected disabled>Select category</option>
+                            <option value="Marriage">Marriage</option>
+                            <option value="ring ceremony">Ring ceremony</option>
+                            <option value="get together">Get together</option>
+                            <option value="Diwali">Diwali</option>
+                            <option value="Navratri">Navratri</option>
+                            <option value="Janmashtami">Janmashtami</option>
+                            <option value="Ladwa ceremony">Ladwa ceremony</option>
+                            <option value="Ganesh Chaturthi">Ganesh Chaturthi</option>
+                            <option value="Birthday party">Birthday party</option>
+                            <option value="Baby shower">Baby shower</option>
+                            <option value="Anniversary">Anniversary</option>
+                            <option value="Anniversary">Bachelor party</option>
+                            <option value="Corporate events">Corporate events</option>
+                            <option value="Holiday gatherings">Holiday gatherings</option>
+                            <option value="Graduation Ceremonies">Graduation Ceremonies</option>
+                            <option value="Themed Parties">Themed Parties</option>
+                            <option value="Bridal Showers">Bridal Showers</option>
+                            <option value="Housewarmings">Housewarmings</option>
+                            <option value="Fundraisers">Fundraisers</option>
+                            <option value="Product Launches">Product Launches</option>
+                            <option value="Retirement Parties">Retirement Parties</option>
+                            <option value="Holiday Open Houses">Holiday Open Houses</option>
+                        </select>
+                        <select name="sub-theme-category" id="sub-theme-category">
+                            <option value="mehndi">Mehndi rasam</option>
+                            <option value="vana">vana rasam</option>
+                            <option value="garba">Ras garba</option>
+                        </select>
+                    </div>
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt">Drop thumb img or click to upload</span>
+                        <input type="file" name="myFile" id="main-img" class="drop-zone__input">
+                    </div>
+                    <div>
+                        <!-- <label for="description">Description</label> -->
+                        <textarea name="description" id="description" cols="70" rows="5" placeholder="add description of theme"></textarea>
+                    </div>
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt">Drop extra img or click to upload</span>
+                        <input type="file" name="myFile" id="extra-img" class="drop-zone__input" multiple="true">
+                    </div>
+                    <div>
+                        <input type="submit" id="submit-theme" value="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/adminpenal.js"></script>
+</body>
+
+</html>
