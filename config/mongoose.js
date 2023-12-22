@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+//db.js
 
-mongoose.connect('mongodb://127.0.0.1/decora');
+const mongoose = require('mongoose')
 
-const db = mongoose.connection;
+const url = `mongodb+srv://decoraevnt:decoraevnt@decora.s2aup1m.mongodb.net/decora`;
 
-db.on('connected',(err)=>{
-    if(err){
-        console.log(err);
-        return false;
-    }
-    console.log("db is start on server");
-})
+const db = mongoose.connect(url)
+    .then( () => {
+        console.log('Connected to the database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. n${err}`);
+    })
 
-module.exports=db;
+module.exports = db; 
